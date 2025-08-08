@@ -1,0 +1,16 @@
+{
+  "name": "realtime-chat",
+  "version": "1.0.0",
+  "description": "Real-time WebSocket chat application",
+  "main": "server/src/server.js",
+  "scripts": {
+    "start": "node server/src/server.js",
+    "dev": "nodemon server/src/server.js",
+    "client": "cd client && npm start",
+    "server": "cd server && npm run dev",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": ["websocket", "chat", "realtime"],
+  "author": "",
+  "license": "MIT"
+}
