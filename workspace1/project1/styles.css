@@ -1,0 +1,89 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 24px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+#container .header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+#container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+#status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+#status::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #aaa; /* default */
+}
+
+.status--connecting#status::before { background: #f2c744; }
+.status--connected#status::before { background: #28a745; }
+.status--disconnected#status::before { background: #dc3545; }
+
+#messages {
+  border: 1px solid #8884;
+  border-radius: 8px;
+  height: 50vh;
+  overflow: auto;
+  padding: 12px;
+  background: transparent;
+}
+
+.msg {
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  background: #8882;
+  word-break: break-word;
+  font-size: 12px;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #8884;
+}
+
+button {
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
